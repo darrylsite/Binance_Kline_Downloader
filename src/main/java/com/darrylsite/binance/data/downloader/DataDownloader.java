@@ -90,8 +90,9 @@ public class DataDownloader {
     public static void main(String[] args) throws IOException {
         String currencyPair = "WAVESUSDT";
         String timeFrame = "5m";
+        int maxMonths = 12;
 
-        List<String> downloadedFiles = download(currencyPair, timeFrame, 12);
+        List<String> downloadedFiles = download(currencyPair, timeFrame, maxMonths);
         if(downloadedFiles.isEmpty()){
             System.out.println("No files where downloaded");
             return;
